@@ -1,0 +1,203 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Workout Schedule</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9ecf,#ffd6eb);
+    min-height:100vh;
+    padding:30px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+}
+
+.schedule{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.day{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.day:hover{
+    transform:translateY(-5px);
+}
+
+.day h2{
+    color:#ff4d94;
+    margin-bottom:10px;
+}
+
+.day ul{
+    list-style:none;
+}
+
+.day li{
+    padding:5px 0;
+}
+
+.completed{
+    background:#d4ffd4 !important;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 15px;
+    border:none;
+    background:#ff4d94;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    width:100%;
+}
+
+button:hover{
+    background:#ff2676;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💖 My Workout Schedule 💖</h1>
+    <p class="subtitle">
+        Focus: Flat Stomach • Glutes • Full Body Toning
+    </p>
+
+    <div class="schedule">
+
+        <div class="day">
+            <h2>Monday 🍑</h2>
+            <ul>
+                <li>20 Squats</li>
+                <li>15 Glute Bridges x3</li>
+                <li>20 Donkey Kicks</li>
+                <li>30 sec Plank x3</li>
+                <li>20 min Walk</li>
+            </ul>
+            <button onclick="completeDay(this)">Done ✔</button>
+        </div>
+
+        <div class="day">
+            <h2>Tuesday 🔥</h2>
+            <ul>
+                <li>20 Crunches x3</li>
+                <li>15 Leg Raises x3</li>
+                <li>30 sec Bicycle Crunches</li>
+                <li>1 min Plank</li>
+                <li>20 min Cardio</li>
+            </ul>
+            <button onclick="completeDay(this)">Done ✔</button>
+        </div>
+
+        <div class="day">
+            <h2>Wednesday 🍑</h2>
+            <ul>
+                <li>25 Squats x3</li>
+                <li>20 Lunges</li>
+                <li>20 Fire Hydrants</li>
+                <li>20 Donkey Kicks</li>
+                <li>15 min Walk</li>
+            </ul>
+            <button onclick="completeDay(this)">Done ✔</button>
+        </div>
+
+        <div class="day">
+            <h2>Thursday 💪</h2>
+            <ul>
+                <li>15 Push-ups</li>
+                <li>20 Jumping Jacks</li>
+                <li>20 Crunches</li>
+                <li>1 min Plank</li>
+                <li>20 min Cardio</li>
+            </ul>
+            <button onclick="completeDay(this)">Done ✔</button>
+        </div>
+
+        <div class="day">
+            <h2>Friday 🍑</h2>
+            <ul>
+                <li>30 Squats</li>
+                <li>20 Glute Bridges</li>
+                <li>20 Donkey Kicks</li>
+                <li>20 Fire Hydrants</li>
+                <li>20 min Walk</li>
+            </ul>
+            <button onclick="completeDay(this)">Done ✔</button>
+        </div>
+
+        <div class="day">
+            <h2>Saturday 🔥</h2>
+            <ul>
+                <li>25 Crunches</li>
+                <li>20 Leg Raises</li>
+                <li>45 sec Plank</li>
+                <li>30 Mountain Climbers</li>
+                <li>25 min Cardio</li>
+            </ul>
+            <button onclick="completeDay(this)">Done ✔</button>
+        </div>
+
+        <div class="day">
+            <h2>Sunday 🌸</h2>
+            <ul>
+                <li>Stretching</li>
+                <li>Yoga</li>
+                <li>Light Walk</li>
+                <li>Hydrate Well</li>
+                <li>Recovery Day</li>
+            </ul>
+            <button onclick="completeDay(this)">Done ✔</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function completeDay(button){
+    const card = button.parentElement;
+    card.classList.toggle("completed");
+
+    if(button.innerText === "Done ✔"){
+        button.innerText = "Completed 🎉";
+    }else{
+        button.innerText = "Done ✔";
+    }
+}
+</script>
+
+</body>
+</html>
+```
